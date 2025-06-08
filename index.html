@@ -3,18 +3,19 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Discover Kos</title>
+  <title>Trip to Kos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
 </head>
 
 <body>
-
+  
   <!-- Hero Section -->
   <section class="hero is-primary is-bold">
     <div class="hero-body">
       <div class="container has-text-centered">
-        <h1 class="title">Discover Kos</h1>
+        <h1 class="title">Trip to Kos</h1>
         <h2 class="subtitle">Explore the top destinations and unforgettable activities on this Greek island paradise.
         </h2>
       </div>
@@ -30,12 +31,13 @@
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
-                <img src="/assets/paradiseBeach.jpg" alt="Paradise Beach">
+                <img src="/assets/paradiseBeach.jpg" alt="Paradise Beach" loading="lazy">
               </figure>
             </div>
             <div class="card-content">
               <p class="title is-4">Paradise Beach</p>
               <p>White sand and crystal-clear waters—perfect for a day of sun and swim.</p>
+              <button class="button is-link is-small mt-2" onclick="openModal('paradiseModal')">More Info</button>
             </div>
           </div>
         </div>
@@ -43,12 +45,13 @@
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
-                <img src="/assets/ancientAgora.jpg" alt="Ancient Agora">
+                <img src="/assets/ancientAgora.jpg" alt="Ancient Agora" loading="lazy">
               </figure>
             </div>
             <div class="card-content">
               <p class="title is-4">Ancient Agora</p>
               <p>Explore the fascinating ruins of a once-bustling ancient marketplace in the heart of Kos Town.</p>
+              <button class="button is-link is-small mt-2" onclick="openModal('agoraModal')">More Info</button>
             </div>
           </div>
         </div>
@@ -56,7 +59,7 @@
           <div class="card">
             <div class="card-image">
               <figure class="image is-4by3">
-                <img src="/assets/ziaVillage.jpg" alt="Zia Village">
+                <img src="/assets/ziaVillage.jpg" alt="Zia Village" loading="lazy">
               </figure>
             </div>
             <div class="card-content">
@@ -86,6 +89,40 @@
       </div>
     </div>
   </section>
+
+  <div class="modal" id="paradiseModal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Paradise Beach</p>
+        <button class="delete" aria-label="close" onclick="closeModal('paradiseModal')"></button>
+      </header>
+      <section class="modal-card-body">
+        <p>Paradise Beach is one of the most popular beaches on Kos, known for its soft white sand, shallow turquoise waters, and water sports. 
+          It's ideal for families, sun-seekers, and snorkelers alike. Don’t miss the inflatable water park in the summer!</p>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-success" onclick="closeModal('paradiseModal')">Close</button>
+      </footer>
+    </div>
+  </div>
+
+  <div class="modal" id="agoraModal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Ancient Agora</p>
+        <button class="delete" aria-label="close" onclick="closeModal('agoraModal')"></button>
+      </header>
+      <section class="modal-card-body">
+        <p>The Ancient Agora of Kos is a fascinating archaeological site in the heart of Kos Town. Once a bustling marketplace, it now features well-preserved ruins of temples, 
+          baths, columns, and mosaic floors. It's a must-visit for history lovers exploring the island’s classical heritage.</p>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-success" onclick="closeModal('agoraModal')">Close</button>
+      </footer>
+    </div>
+  </div>
 
   <div class="modal" id="ziaModal">
     <div class="modal-background"></div>
@@ -125,8 +162,9 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="content has-text-centered">
-      <p>
+      <p> Big Meaty Trip to Kos
       </p>
+      <img src="/assets/favicon.png" width="100px">
     </div>
   </footer>
 
