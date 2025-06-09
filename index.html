@@ -10,13 +10,13 @@
 </head>
 
 <body>
-  
+
   <!-- Hero Section -->
   <section class="hero is-primary is-bold">
     <div class="hero-body">
       <div class="container has-text-centered">
         <h1 class="title">Trip to Kos</h1>
-        <h2 class="subtitle">Explore the top destinations and unforgettable activities on this Greek island paradise.
+        <h2 class="subtitle">Trip ideas, destinations and activities.
         </h2>
       </div>
     </div>
@@ -27,6 +27,20 @@
     <div class="container">
       <h3 class="title is-3 has-text-centered">Top Destinations</h3>
       <div class="columns is-multiline">
+        <div class="column is-one-third">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="/assets/asklepion.jpg" alt="Asklepion" loading="lazy">
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-4">Asklepion</p>
+              <p>A medieval fortress offering panoramic views of Kos harbor and the town.</p>
+              <button class="button is-link is-small mt-2" onclick="openModal('asklepionModal')">More Info</button>
+            </div>
+          </div>
+        </div>
         <div class="column is-one-third">
           <div class="card">
             <div class="card-image">
@@ -69,6 +83,34 @@
             </div>
           </div>
         </div>
+        <div class="column is-one-third">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="/assets/neratziaCastle.jpg" alt="Neratzia Castle" loading="lazy">
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-4">Neratzia Castle</p>
+              <p>A medieval fortress offering panoramic views of Kos harbor and the town.</p>
+              <button class="button is-link is-small mt-2" onclick="openModal('castleModal')">More Info</button>
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="/assets/thermaBeach.jpg" alt="Therma Beach" loading="lazy">
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-4">Therma Beach</p>
+              <p>Natural hot springs by the sea—soak and relax in a unique coastal setting.</p>
+              <button class="button is-link is-small mt-2" onclick="openModal('thermaModal')">More Info</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -90,6 +132,7 @@
     </div>
   </section>
 
+  <!--All modal info-->
   <div class="modal" id="paradiseModal">
     <div class="modal-background"></div>
     <div class="modal-card">
@@ -98,8 +141,10 @@
         <button class="delete" aria-label="close" onclick="closeModal('paradiseModal')"></button>
       </header>
       <section class="modal-card-body">
-        <p>Paradise Beach is one of the most popular beaches on Kos, known for its soft white sand, shallow turquoise waters, and water sports. 
-          It's ideal for families, sun-seekers, and snorkelers alike. Don’t miss the inflatable water park in the summer!</p>
+        <p>Paradise Beach is one of the most popular beaches on Kos, known for its soft white sand, shallow turquoise
+          waters, and water sports.
+          It's ideal for families, sun-seekers, and snorkelers alike. Don’t miss the inflatable water park in the
+          summer!</p>
       </section>
       <footer class="modal-card-foot">
         <button class="button is-success" onclick="closeModal('paradiseModal')">Close</button>
@@ -115,8 +160,10 @@
         <button class="delete" aria-label="close" onclick="closeModal('agoraModal')"></button>
       </header>
       <section class="modal-card-body">
-        <p>The Ancient Agora of Kos is a fascinating archaeological site in the heart of Kos Town. Once a bustling marketplace, it now features well-preserved ruins of temples, 
-          baths, columns, and mosaic floors. It's a must-visit for history lovers exploring the island’s classical heritage.</p>
+        <p>The Ancient Agora of Kos is a fascinating archaeological site in the heart of Kos Town. Once a bustling
+          marketplace, it now features well-preserved ruins of temples,
+          baths, columns, and mosaic floors. It's a must-visit for history lovers exploring the island’s classical
+          heritage.</p>
       </section>
       <footer class="modal-card-foot">
         <button class="button is-success" onclick="closeModal('agoraModal')">Close</button>
@@ -141,22 +188,68 @@
     </div>
   </div>
 
-  <section class="section">
-  <div class="container">
-    <h3 class="title is-3 has-text-centered">Map of Kos</h3>
-    <div class="box">
-      <iframe
-        width="100%"
-        height="450"
-        frameborder="0"
-        style="border:0"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d408967.09398642177!2d26.80685355404557!3d36.79322156898284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bdfe67b6c08b35%3A0x9e9cc4f8469bdcdd!2sKos!5e0!3m2!1sen!2suk!4v1749579342466!5m2!1sen!2suk" 
-        allowfullscreen
-        loading="lazy">
-      </iframe>
+  <div class="modal" id="castleModal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Neratzia Castle</p>
+        <button class="delete" aria-label="close" onclick="closeModal('castleModal')"></button>
+      </header>
+      <section class="modal-card-body">
+        <p>Built by the Knights of St. John, the Neratzia Castle is a great spot for history buffs and photographers.
+          Explore the massive stone walls, towers, and sea views.</p>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-success" onclick="closeModal('castleModal')">Close</button>
+      </footer>
     </div>
   </div>
-</section>
+
+  <div class="modal" id="asklepionModal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Asklepion</p>
+        <button class="delete" aria-label="close" onclick="closeModal('asklepionModal')"></button>
+      </header>
+      <section class="modal-card-body">
+        <p>The Asklepion is the most significant archaeological site on Kos, serving as an ancient medical center founded in honor of Asclepius, the god of healing. It's believed that Hippocrates, 
+          the father of medicine, studied and taught here. The site features multi-level terraces with temples, baths, and a stunning view over Kos Town and the Turkish coast.</p>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-success" onclick="closeModal('asklepionModal')">Close</button>
+      </footer>
+    </div>
+  </div>
+
+  <div class="modal" id="thermaModal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Therma Beach</p>
+        <button class="delete" aria-label="close" onclick="closeModal('thermaModal')"></button>
+      </header>
+      <section class="modal-card-body">
+        <p>Therma Beach is famous for its natural hot springs that flow into a rock pool beside the sea. The warm, mineral-rich water is said to have 
+          therapeutic properties and is perfect for a soothing soak. Surrounded by cliffs and with stunning sea views, it’s a peaceful spot to unwind after a day of exploring.</p>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-success" onclick="closeModal('thermaModal')">Close</button>
+      </footer>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <h3 class="title is-3 has-text-centered">Map of Kos</h3>
+      <div class="box">
+        <iframe width="100%" height="450" frameborder="0" style="border:0"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d408967.09398642177!2d26.80685355404557!3d36.79322156898284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bdfe67b6c08b35%3A0x9e9cc4f8469bdcdd!2sKos!5e0!3m2!1sen!2suk!4v1749579342466!5m2!1sen!2suk"
+          allowfullscreen loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
 
 
   <!-- Footer -->
