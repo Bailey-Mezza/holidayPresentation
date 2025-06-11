@@ -276,12 +276,18 @@
 </body>
 <script>
   function openModal(id) {
-    document.getElementById(id).classList.add('is-active');
+    const modal = document.getElementById(id);
+    modal.classList.add('is-active');
+    
+    // Allow clicking the background to close the modal
+    const background = modal.querySelector('.modal-background');
+    background.onclick = () => closeModal(id);
   }
 
   function closeModal(id) {
     document.getElementById(id).classList.remove('is-active');
   }
 </script>
+
 
 </html>
